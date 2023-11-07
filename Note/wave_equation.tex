@@ -24,8 +24,21 @@
 \maketitle
 依赖区域，决定区域，影响区域实际上都是扰动以有限速度传播的体现
 
+初值不为零的自由振动用达朗贝尔公式求解即可
+$$\begin{cases}
+u_{tt}-c^2u_{xx}=0 \\
+u(0,x)=\phi(x),u_t(0,x)=\psi(x)
+\end{cases}$$
+$$u(t,x)=\frac{1}{2}(\phi(x-ct)+\phi(x+ct))+\frac{1}{2c}\int_{x-ct}^{x+ct}\psi(\xi)d\xi $$
 
+初值为零的受迫振动转化成初值不为零的自由振动
+$$\begin{cases}
+u_{tt}-c^2u_{xx}=f(t,x)\\
+u(0,x)=0,u_t(0,x)=0
+\end{cases}$$
+$$u(t,x)=\frac{1}{2c}\int_0^t\int_{x-c(t-\tau)}^{x+c(t-\tau)}f(\tau,\xi)d\xi d\tau $$
 
+初值不为零的受迫振动利用叠加原理转化成以上两种方程分别求解
 
 
 
