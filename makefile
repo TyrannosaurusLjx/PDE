@@ -1,4 +1,4 @@
-message = commit a intro about a function
+message = hw finished
 
 .PHONY: message
 
